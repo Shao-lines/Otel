@@ -1,0 +1,1216 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #5846f9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8577fb;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #5846f9;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #7b27d8;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 10px 0;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(24, 6, 185, 0.8);
+  padding: 12px 0;
+}
+
+#header .logo {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar>ul>li {
+  padding: 10px 0 10px 24px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 25px;
+  margin-left: 30px;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar .getstarted:before,
+.navbar li:hover>.getstarted:before {
+  visibility: hidden;
+}
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(28, 47, 65, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile>ul>li {
+  padding: 0;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #2c4964;
+}
+
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
+  visibility: hidden;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #5846f9;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#hero .container,
+#hero .container-fluid {
+  padding-top: 84px;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 64px;
+  color: black; 
+}
+
+#hero h2 {
+  color: black;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 1200px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  #hero {
+    text-align: center;
+  }
+
+  #hero .container,
+  #hero .container-fluid {
+    padding-top: 68px;
+  }
+
+  #hero .animated {
+    animation: none;
+  }
+
+  #hero .hero-img {
+    text-align: center;
+  }
+
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #hero .hero-img img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px),
+(max-height: 600px) {
+  #hero {
+    height: auto;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f9f8ff;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;  
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #5846f9;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about {
+  padding: 120px 0;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #2c4964;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #5846f9;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  background-color: white;
+  padding: 80px 0 60px 0;
+}
+
+.counts .counters span {
+  font-size: 48px;
+  display: block;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.counts .counters p {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Services */
+.box img{
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+}
+/* ---------------- */
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.pricing .box {
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing h3 {
+  font-weight: 400;
+  margin: -20px -20px 20px -20px;
+  padding: 20px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c4964;
+  background: #f8f8f8;
+}
+
+.pricing h4 {
+  font-size: 36px;
+  color: #5846f9;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+
+.pricing h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+
+.pricing h4 span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.pricing ul li {
+  padding-bottom: 16px;
+}
+
+.pricing ul i {
+  color: #5846f9;
+  font-size: 18px;
+  padding-right: 4px;
+}
+
+.pricing ul .na {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+
+.pricing .featured h3 {
+  color: #000000;
+}
+
+.pricing .advanced {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: #5846f9;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+  background: #fff;
+}
+
+.contact .info-box i {
+  font-size: 32px;
+  color: #5846f9;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #2c4964;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  background: #fff;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #5846f9;
+}
+
+.contact .php-email-form input {
+  padding: 10px 15px;
+}
+
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #5846f9;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #7b27d8;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #fff;
+  font-size: 14px;
+  background: black;
+  background-size: cover;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  position: relative;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+#footer .footer-newsletter {
+  font-size: 15px;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  bottom: -1px;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #5846f9;
+}
+
+#footer .copyright-wrap {
+  border-top: 1px solid #8577fb;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #fff;
+}
+
+#footer .credits a {
+  color: #fff;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+.nomer-text{
+  color: #edaa7e;
+}
+.img-nomer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-nomer img{
+  height: 560px;
+  object-fit: cover;
+  width: 100%;
+}
+.nomera-nom ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.nomera-nom i{
+  font-size: 25px;
+  color: #edaa7e;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+.nomera-nom li {
+  position: relative;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.img-nom{
+  height: 260px;
+  width: 400px;
+}
+.nomer-price{
+  margin-top: 120px;
+  font-size: 18px;
+  color: rgb(91, 91, 240);
+}
+.nom-text{
+  font-size: 18px;
+  margin-top: 10px;
+}
+.title-nom{
+  margin-top: 30px;
+  color: rgb(91, 91, 240);
+}
+.nom{
+  margin-top: 100px;
+}
+.rest{
+  margin-top: 80px;
+  width: 100%;
+  height: 60vh;
+  background: url("https://hotel-spb.ru/assets/components/phpthumbof/cache/restaurants_bering_main.bf036fb1ddb81b19bb409c0b48f53adb.jpg") center center no-repeat;
+  background-size: cover;
+}
+.rest-text{
+  color: #edaa7e;
+  font-size: 34px;
+}
+.text-desc p{
+  font-size: 17px;
+}
+.rest-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.item{
+  margin-right: 70px;
+}
+#osnv{
+  width: 400px;
+  height: 300px;
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/021A5074.df9eea09b40fcb394b460dc9b0758893.jpg');
+  background-size: cover;
+  opacity: 1;
+  margin-right: 25px;
+  margin-left:15px;
+}
+#osnv a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 25px;
+  }
+#osnv:hover{
+  opacity: 0.9;
+  transition: 0.5s;
+}
+ #vino{
+  width: 400px;
+  height: 300px;
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/_%D0%B2%D0%B8%D0%BD%D0%BE.df9eea09b40fcb394b460dc9b0758893.jpg');
+  background-size: cover;
+  opacity: 1;
+  margin-right: 25px;
+  margin-left: 15px;
+ }
+ #vino a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 25px;
+ }
+ #vino:hover{
+  opacity: 0.9;
+  transition: 0.5s;
+ }
+ #bar{
+  width: 400px;
+  height: 300px;
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/021A7997.df9eea09b40fcb394b460dc9b0758893.jpg');
+  background-size: cover;
+  opacity: 1;
+  margin-right: 25px;
+  margin-left: 15px;
+ }
+ #bar:hover{
+  opacity: 0.9;
+  transition: 0.5s;
+ }
+ #bar a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 25px;
+ }
+ #infshef{
+  background: rgb(244, 239, 239);
+  color: black;
+ }
+
+ #vid{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_1.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+ }
+ #sup{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_2.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+ }
+#vid2{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_4.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#sal{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_3.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#vid3{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_5.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+.gal1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#item_1{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_wedding_02.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#item_2{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_8.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#item_3{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_7.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#item_4{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_6.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px; 
+}
+#item_5{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/bering_photo_0.3a184e0184f98d6a331c2f726a3122dd.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px; 
+}
+.pool{
+  margin-top: 80px;
+  width: 100%;
+  height: 60vh;
+  background: url("https://hotel-spb.ru/assets/components/phpthumbof/cache/%20shir.1f28c2f78a2500c6b22c3eed6e7f1566.jpg") center center no-repeat;
+  background-size: cover;
+}
+.pool-text{
+  color: #edaa7e;
+  font-size: 34px;
+}
+#bronepool input{
+  width: 350px;
+  outline: 1px solid silver;
+}
+#bronepoolbut button{
+  color: white;
+  width: 100%;
+  background-color: #edaa7e;
+  margin-top: 25px;
+}
+#bronepoolbut button:hover{
+  color: #edaa7e;
+  background-color: white;
+}
+#raz_1{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/%20prew.6c67be7dff2dc7967c507206981d6cca.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#raz_2{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82_%D0%B2-%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E5.6c67be7dff2dc7967c507206981d6cca.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#raz_3{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82_%D0%B2-%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E2.6c67be7dff2dc7967c507206981d6cca.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#raz_4{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82_%D0%B2-%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E11.6c67be7dff2dc7967c507206981d6cca.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+#raz_5{
+  background: url('https://hotel-spb.ru/assets/components/phpthumbof/cache/-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82_%D0%B2-%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E3.6c67be7dff2dc7967c507206981d6cca.jpg');
+  background-size: cover;
+  width: 210px;
+  height: 160px;
+  margin-left: 50px;
+}
+
+#pol1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kras{
+  margin-top: 100px;
+}
+.kras h2{
+  color: #edaa7e;
+}
+#bronekras input{
+  width: 350px;
+  outline: 1px solid silver;
+}
+#bronekrasbut button{
+  color: white;
+  width: 100%;
+  height: 70%;
+  background-color: #edaa7e;
+  margin-top: 20px;
+}
+#bronekrasbut:hover{
+  color: #edaa7e;
+  background-color: white;
+}
+.img-kras img{
+  width: 100%;
+  height: 100%;
+}
+#photokras img{
+  width: 100%;
+  height: 100%;
+}
+#photokras1 img{
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+#cont h3{
+  color: #edaa7e;
+  font-size: 34px;
+  margin-top: 100px;
+}
+#poloscont{
+  border-bottom: 3px #edaa7e solid;
+}
+.card-section{
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: #edaa7e;
+}
+.card{
+  border: #edaa7e solid;
+}
+
+.electro{
+  margin-top: 80px;
+  width: 100%;
+  height: 60vh;
+  background: url("https://hotel-spb.ru/assets/components/phpthumbof/cache/Electrocar%20izm.1f28c2f78a2500c6b22c3eed6e7f1566.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.electro-section{
+  color: #edaa7e;
+  font-size: 34px;
+}
+#el{
+  font-size: 18px;
+}
+.brone{
+  margin-top: 110px;
+}
+.brone-input{
+  width: 400px;
+}
+
+.brone-form{
+  outline: 2px #edaa7e solid;
+  border-radius: 20px;
+}
